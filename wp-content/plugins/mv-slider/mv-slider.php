@@ -58,7 +58,6 @@ if( ! class_exists( 'MV_Slider' ) ){
         public static function uninstall(){
 
         }
-
     }
 }
 
