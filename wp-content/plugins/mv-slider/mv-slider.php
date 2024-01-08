@@ -64,14 +64,14 @@ if( ! class_exists( 'MV_Slider' ) ){
 
         }
 
-        public function add_menu() {
+        public function add_menu(){
             add_menu_page(
                 'MV Slider Options',
                 'MV Slider',
                 'manage_options',
                 'mv_slider_admin',
                 array( $this, 'mv_slider_settings_page' ),
-                'dashicons-images-alt2',
+                'dashicons-images-alt2'
             );
 
             add_submenu_page(
@@ -86,16 +86,17 @@ if( ! class_exists( 'MV_Slider' ) ){
 
             add_submenu_page(
                 'mv_slider_admin',
-                'Add New Slides',
-                'Add New Slides',
+                'Add New Slide',
+                'Add New Slide',
                 'manage_options',
                 'post-new.php?post_type=mv-slider',
                 null,
                 null
             );
+
         }
 
-        public function mv_slider_settings_page() {
+        public function mv_slider_settings_page(){
             require( MV_SLIDER_PATH . 'views/settings-page.php' );
         }
     }
